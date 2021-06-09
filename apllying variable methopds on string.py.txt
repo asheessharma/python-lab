@@ -1,0 +1,22 @@
+
+n the first line, print True if given string  has any alphanumeric characters. Otherwise, print False.
+In the second line, print True if given string   has any alphabetical characters. Otherwise, print False.
+In the third line, print True if   given string   has any digits. Otherwise, print False.
+In the fourth line, print True if  given string has any lowercase characters. Otherwise, print False.
+In the fifth line, print True if  given string  has any uppercase characters. Otherwise, print False.
+
+SAMPLE INPUT:
+   qA2
+
+SAMOLE OUTPUT:
+True
+True
+True
+True
+True
+
+
+s = raw_input()
+newList = [[c.isalnum(), c.isalpha(), c.isdigit(), c.islower(), c.isupper()] for c in s]
+rotated = list(zip(*newList))
+print "\n".join([str(any(i)) for i in rotated])
